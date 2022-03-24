@@ -1,0 +1,33 @@
+.game {
+  &-item {
+    &__button {
+      width: 154px;
+      height: 154px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__image {
+      background-size: contain;
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+
+    &__paper {
+      background-image: url("../../assets/images/icon-paper.svg");
+    }
+
+    &__scissors {
+      background-image: url("../../assets/images/icon-scissors.svg");
+    }
+
+    &__rock {
+      background-image: url("../../assets/images/icon-rock.svg");
+    }
+  }
+}

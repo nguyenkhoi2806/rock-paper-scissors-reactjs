@@ -2,6 +2,8 @@ import "./game.scss";
 
 import Triangle from "../../../assets/images/bg-triangle.svg";
 
+import GameItem from "../../../components/GameItem";
+
 function Game() {
   return (
     <div className="game">
@@ -10,21 +12,9 @@ function Game() {
         alt="triangle-background"
         className="game-background"
       />
-      <div className="game__item game__paper">
-        <div className="game__item-button">
-          <span className="game__item-paper game__item-image"></span>
-        </div>
-      </div>
-      <div className="game__item game__scissors">
-        <div className="game__item-button">
-          <span className="game__item-scissors game__item-image"></span>
-        </div>
-      </div>
-      <div className="game__item game__rock">
-        <div className="game__item-button">
-          <span className="game__item-rock game__item-image"></span>
-        </div>
-      </div>
+      <GameItem name="paper" />
+      <GameItem name="scissors" />
+      <GameItem name="rock" />
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.result {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    text-align: center;
+
+    span {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+
+  &--show {
+    justify-content: center;
+  }
+}
