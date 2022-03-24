@@ -1,0 +1,33 @@
+.header {
+  margin-bottom: 4rem;
+  border: 4px solid #606e85;
+  padding: 16px 22px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+  width: 50%;
+
+  &-score {
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+    border-radius: 7px;
+    width: 150px;
+    height: 114px;
+    text-align: center;
+
+    p {
+      color: #2a46c0;
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 64.5px;
+      line-height: 0.8;
+      color: #3b4363;
+    }
+  }
+}

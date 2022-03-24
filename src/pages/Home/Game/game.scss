@@ -1,0 +1,68 @@
+.game {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-background {
+    width: 300px;
+    height: 300px;
+  }
+
+  &__paper {
+    top: 0;
+    left: 0;
+  }
+
+  &__scissors {
+    right: 0;
+    top: 0;
+  }
+
+  &__rock {
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__item {
+    position: absolute;
+
+    &-paper {
+      background-image: url("../../../assets/images/icon-paper.svg");
+    }
+
+    &-scissors {
+      background-image: url("../../../assets/images/icon-scissors.svg");
+    }
+
+    &-rock {
+      background-image: url("../../../assets/images/icon-rock.svg");
+    }
+
+    &-button {
+      width: 154px;
+      height: 154px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 1px 20px 10px #f8f8f8;
+      }
+    }
+
+    &-image {
+      background-size: contain;
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+  }
+}
