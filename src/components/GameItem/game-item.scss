@@ -1,21 +1,33 @@
+@import "../../assets/common/variable";
+
 .game {
   &-item {
     &__button {
-      width: 154px;
-      height: 154px;
       background: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100px;
+      height: 100px;
+
+      @media screen and (min-width: $media-sm) {
+        width: 154px;
+        height: 154px;
+      }
     }
 
     &__image {
       background-size: contain;
       display: block;
-      width: 100px;
-      height: 100px;
       background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+
+      @media screen and (min-width: $media-sm) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     &__paper {

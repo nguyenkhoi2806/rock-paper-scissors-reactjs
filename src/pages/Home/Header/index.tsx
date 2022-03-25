@@ -2,7 +2,13 @@ import "./header.scss";
 
 import Logo from "../../../assets/images/logo.svg";
 
-function Header() {
+interface HeaderInterface {
+  score: number;
+}
+
+function Header(props: HeaderInterface) {
+  const { score } = props;
+
   return (
     <div className="header">
       <div className="header-img">
@@ -10,7 +16,7 @@ function Header() {
       </div>
       <div className="header-score">
         <p>SCORE</p>
-        <span>3</span>
+        <span>{score}</span>
       </div>
     </div>
   );

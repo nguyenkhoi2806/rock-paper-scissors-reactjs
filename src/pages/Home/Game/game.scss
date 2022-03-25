@@ -1,15 +1,27 @@
+@import "../../../assets/common/variable.scss";
+
 .game {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  @media screen and (min-width: $media-sm) {
+    width: 400px;
+    height: 400px;
+  }
+
   &-background {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+
+    @media screen and (min-width: $media-sm) {
+      width: 300px;
+      height: 300px;
+    }
   }
 
   &-item {

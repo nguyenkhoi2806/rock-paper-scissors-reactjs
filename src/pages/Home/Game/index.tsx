@@ -1,15 +1,15 @@
 import "./game.scss";
 
 import Triangle from "../../../assets/images/bg-triangle.svg";
-
 import GameItem from "../../../components/GameItem";
 import { GAME_TYPES } from "../../../constant/gameTypes";
-import GameType from "../../../models/GameType";
 
-function Game() {
-  const handlePlayGame = (gameType: GameType) => {
-    console.log(gameType);
-  };
+interface GameProps {
+  handlePlayGame: Function;
+}
+
+function Game(props: GameProps) {
+  const { handlePlayGame } = props;
 
   return (
     <div className="game">

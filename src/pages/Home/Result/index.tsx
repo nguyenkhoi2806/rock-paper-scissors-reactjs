@@ -4,25 +4,30 @@ import GameItem from "../../../components/GameItem";
 import GameType from "../../../models/GameType";
 
 interface ResultProps {
-  gameType: GameType;
+  userPicked: GameType;
+  computerPicked: GameType;
+  playAgain: () => void;
+  resultText: string;
 }
 
 function Result(props: ResultProps) {
-  const { gameType } = props;
+  const { userPicked, computerPicked, playAgain, resultText } = props;
 
   return (
     <div className="result">
       <div className="result__item">
         <span>You picked</span>
-        <GameItem gameType={gameType} />
+        <GameItem gameType={userPicked} />
       </div>
       <div className="result__item result--show">
-        <span className="result__item-text">You close</span>
-        <button className="result__item-play-again">Play again</button>
+        <span className="result__item-text">You {resultText}</span>
+        <button className="result__item-play-again" onClick={playAgain}>
+          Play again
+        </button>
       </div>
       <div className="result__item">
         <span>The House Picked</span>
-        <GameItem gameType={gameType} />
+        <GameItem gameType={computerPicked} />
       </div>
     </div>
   );

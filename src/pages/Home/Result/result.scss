@@ -1,7 +1,13 @@
+@import "../../../assets/common/variable.scss";
+
 .result {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 100%;
+
+  @media screen and (min-width: $media-sm) {
+    width: 70%;
+  }
 
   &__item {
     display: flex;
@@ -13,20 +19,46 @@
 
     span {
       color: white;
-      font-size: 1.5rem;
+      font-size: 1rem;
+
+      @media screen and (min-width: $media-sm) {
+        font-size: 1.5rem;
+      }
     }
 
     .game-item {
-      margin-top: 2rem;
+      margin-top: 3rem;
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+
+      @media screen and (min-width: $media-sm) {
+        margin-top: 2rem;
+      }
+
+      &__button {
+        width: 60px;
+        height: 60px;
+
+        @media screen and (min-width: $media-sm) {
+          width: auto;
+          height: auto;
+        }
+      }
     }
 
     &-play-again {
-      padding: 15px 60px;
+      padding: 20px;
       text-align: center;
       background: #e8e8e8;
       border-radius: 10px;
       margin-top: 14px;
       cursor: pointer;
+
+      @media screen and (min-width: $media-sm) {
+        padding: 15px 60px;
+      }
     }
   }
 
