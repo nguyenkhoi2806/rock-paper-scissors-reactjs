@@ -1,13 +1,20 @@
 import "./result.scss";
 
 import GameItem from "../../../components/GameItem";
+import GameType from "../../../models/GameType";
 
-function Result() {
+interface ResultProps {
+  gameType: GameType;
+}
+
+function Result(props: ResultProps) {
+  const { gameType } = props;
+
   return (
     <div className="result">
       <div className="result__item">
         <span>You picked</span>
-        <GameItem />
+        <GameItem gameType={gameType} />
       </div>
       <div className="result__item result--show">
         <span className="result__item-text">You close</span>
@@ -15,7 +22,7 @@ function Result() {
       </div>
       <div className="result__item">
         <span>The House Picked</span>
-        <GameItem />
+        <GameItem gameType={gameType} />
       </div>
     </div>
   );
